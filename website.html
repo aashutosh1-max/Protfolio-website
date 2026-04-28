@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mr. Banjade — Portfolio</title>
+  <link rel="stylesheet" href="website.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+<body>
+
+  <!-- ═══════════════════════════ CURSOR ═══════════════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Mr<span>.</span> Banjade</a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="dot"></span> Available for opportunities</p>
+      <h1 class="hero-name">Mr.<br/><span>Aashutosh</span><br/>Banjade</h1>
+      <p class="hero-sub">Tech Student &nbsp;·&nbsp; Aspiring Cyber Analyst &nbsp;·&nbsp; Market Enthusiast</p>
+      <div class="hero-tags">
+        <span class="htag tech"><i class="fa-solid fa-microchip"></i> Tech</span>
+        <span class="htag trader"><i class="fa-solid fa-chart-line"></i>Stock Exchange</span>
+        <span class="htag trek"><i class="fa-solid fa-mountain"></i> Trekking</span>
+        <span class="htag fashion"><i class="fa-solid fa-shirt"></i> Fashion</span>
+        <span class="htag contentcreation"><i class="fa-solid fa-camera"></i> Content Creation</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-outline">Let's Connect</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+    <!-- Floating tech icons -->
+    <canvas id="candleChart"></canvas>
+  </section>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">01 — About Me</div>
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <div class="about-avatar">
+            <img src="Selfie.jpeg" alt="Your Name" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"/>
+            <div class="avatar-ring"></div>
+          </div>
+          <div class="about-location"><i class="fa-solid fa-location-dot"></i> Butwal, Nepal</div>
+        </div>
+        <div class="about-right reveal">
+          <h2 class="section-title">A curious mind<br/><span>building the future.</span></h2>
+          <p class="about-bio">
+            नमस्ते! म <strong>Aashutosh Banjade</strong> — Networking र Cyber Security मा degree गर्दै गरेको एक जोशिलो tech student। म technology, content, finance, प्रकृति, र style — यी पाँच फरक दुनियाँको चौराहामा उभिएको मान्छे हुँ, तर यी सबैमा एउटा साझा कुरा छ: <em>pattern recognition</em>।
+          </p>
+          <p class="about-bio">
+            मलाई समस्या समाधान गर्न, नयाँ technologies सिक्न, र अर्थपूर्ण कुराहरू बनाउन मन पर्छ। जब म code मा डुबेको छैन वा market charts पढ्दै छैन, तब म हिमालयको trail मा हुन्छु — वा आफ्नो content मार्फत् मानिसहरूसँग जोडिन्छु।।
+          </p>
+          <div class="about-facts">
+            <div class="fact-item">
+              <span class="fact-num">Cyber</span>
+              <span class="fact-label">Student</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-num">5</span>
+              <span class="fact-label">Passions</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-num">∞</span>
+              <span class="fact-label">Curiosity</span>
+            </div>
+          </div>
+          <a href="https://drive.google.com/file/d/1YwEtxOhNJEBAbhuH7dJJdIPPllL67yzu/view?usp=drive_link" target="_blank" class="btn-primary" style="display:inline-block;margin-top:2rem;">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+  <section id="skills" class="section-dark">
+    <div class="container">
+      <div class="section-label">02 — Skills & Stack</div>
+      <h2 class="section-title reveal">My Technical<br/><span>Arsenal</span></h2>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header"><i class="fa-brands fa-html5"></i> Frontend</div>
+          <div class="skill-items">
+            <div class="skill-bar-item">
+              <div class="skill-name"><span>HTML5</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:90%;background:var(--orange);"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-name"><span>CSS3 / SCSS</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:80%;background:var(--blue);"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-name"><span>JavaScript (ES6+)</span><span class="skill-pct">10%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:10%;background:var(--yellow);"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-name"><span>React.js</span><span class="skill-pct">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;background:#61dafb;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header"><i class="fa-brands fa-node-js"></i> Backend</div>
+          <div class="skill-items">
+            <div class="skill-bar-item">
+              <div class="skill-name"><span>Node.js</span><span class="skill-pct">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;background:#68a063;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-name"><span>Express.js</span><span class="skill-pct">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;background:var(--gold);"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-name"><span>Python</span><span class="skill-pct">40%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:40%;background:#3572A5;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-name"><span>REST APIs</span><span class="skill-pct">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;background:var(--teal);"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header"><i class="fa-solid fa-database"></i> Database & Tools</div>
+          <div class="skill-items">
+            <div class="skill-bar-item">
+              <div class="skill-name"><span>MongoDB</span><span class="skill-pct">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;background:#47A248;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-name"><span>MySQL</span><span class="skill-pct">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;background:#4479A1;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-name"><span>Git & GitHub</span><span class="skill-pct">10%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:10%;background:#F05032;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-name"><span>VS Code / Linux</span><span class="skill-pct">50%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:50%;background:var(--gold);"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tech Badges -->
+      <div class="tech-badges reveal">
+        <div class="badge"><i class="fa-brands fa-react"></i> React</div>
+        <div class="badge"><i class="fa-brands fa-node-js"></i> Node.js</div>
+        <div class="badge"><i class="fa-brands fa-js"></i> JavaScript</div>
+        <div class="badge"><i class="fa-brands fa-python"></i> Python</div>
+        <div class="badge"><i class="fa-brands fa-html5"></i> HTML5</div>
+        <div class="badge"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+        <div class="badge"><i class="fa-brands fa-git-alt"></i> Git</div>
+        <div class="badge"><i class="fa-solid fa-database"></i> MongoDB</div>
+        <div class="badge"><i class="fa-brands fa-linux"></i> Linux</div>
+        <div class="badge"><i class="fa-solid fa-terminal"></i> CLI</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EDUCATION ═══════════════════════════ -->
+  <section id="education">
+    <div class="container">
+      <div class="section-label">03 — Education</div>
+      <h2 class="section-title reveal">Academic<br/><span>Journey</span></h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-top">
+              <div class="tl-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="tl-date">2026 — Present</div>
+              <div class="tl-date gpa">GPA-<i class="fa-solid fa-mountain"></i></div>
+            </div>
+            <h3 class="tl-title">Bachelor of Cyber Security and Networking</h3>
+            <p class="tl-place">Not Joined Yet &nbsp;·&nbsp; Kathmandu, Nepal</p>
+            <p class="tl-desc">Studying core  concepts including Networking, Bounty Hunting, Database, Cloud, Cyber Laws etc. Currently in 1st year.</p>
+            <div class="tl-tags">
+              <span>Data Structures</span><span>Python</span><span>Cloud</span><span>Networking</span><span>Ethical Hacking</span><span>Bounty</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-top">
+              <div class="tl-icon"><i class="fa-solid fa-school"></i></div>
+              <div class="tl-date">2023 — 2025</div>
+              <div class="tl-date gpa">GPA-3.57</div>
+            </div>
+            <h3 class="tl-title">Higher Secondary (+2) — Science</h3>
+            <p class="tl-place">Paramount College &nbsp;·&nbsp;Butwal, Nepal</p>
+            <p class="tl-desc">Completed +2 in Science stream with Physics, Chemistry, Mathematics and Computer Science as major subjects.</p>
+            <div class="tl-tags">
+              <span>Mathematics</span><span>Physics</span><span>Computer</span><span>Chemistry</span><span>English</span><span>Nepali</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tl-top">
+              <div class="tl-icon"><i class="fa-solid fa-book"></i></div>
+              <div class="tl-date">— 2020</div>
+              <div class="tl-date gpa">GPA-3.70</div>
+            </div>
+            <h3 class="tl-title">Secondary Education (SEE)</h3>
+            <p class="tl-place">Paramount Boarding High School&nbsp;·&nbsp;Butwal, Nepal</p>
+            <p class="tl-desc">Completed Secondary Education Examination with distinction. Developed early interest in computers and technology.</p>
+            <div class="tl-tags">
+              <span>SEE Graduate</span><span>Distinction</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+  <section id="projects" class="section-dark">
+    <div class="container">
+      <div class="section-label">04 — Projects</div>
+      <h2 class="section-title reveal">Building in<br/><span>Progress</span></h2>
+      <p class="section-sub reveal">As a student, my projects are currently under active development. Here's a glimpse of what's coming.</p>
+      <div class="projects-grid">
+
+        <div class="project-card reveal dev">
+          <div class="dev-badge"><i class="fa-solid fa-hammer"></i> Under Development</div>
+          <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3 class="project-title">Stock Market Dashboard</h3>
+          <p class="project-desc">A real-time stock tracking and portfolio management web app with charting, alerts, and market news integration.</p>
+          <div class="project-tech">
+            <span>React.js</span><span>Node.js</span><span>Chart.js</span><span>API</span>
+          </div>
+          <div class="project-progress">
+            <div class="progress-label"><span>Progress</span><span>0%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal dev">
+          <div class="dev-badge"><i class="fa-solid fa-hammer"></i> Under Development</div>
+          <div class="project-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+          <h3 class="project-title">Trek Trail Planner</h3>
+          <p class="project-desc">A web platform to discover, plan, and share Himalayan trekking routes with elevation profiles, weather data, and community reviews.</p>
+          <div class="project-tech">
+            <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Maps API</span>
+          </div>
+          <div class="project-progress">
+            <div class="progress-label"><span>Progress</span><span>0%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal dev">
+          <div class="dev-badge"><i class="fa-solid fa-hammer"></i> Under Development</div>
+          <div class="project-icon"><i class="fa-solid fa-shirt"></i></div>
+          <h3 class="project-title">Clothing Site</h3>
+          <p class="project-desc">A curated digital lookbook and style journal — merging Nepali aesthetics with contemporary streetwear, built as a personal fashion brand.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GSAP</span>
+          </div>
+          <div class="project-progress">
+            <div class="progress-label"><span>Progress</span><span>20%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
+          </div>
+        </div>
+
+        
+
+        <div class="project-card reveal dev coming-soon">
+          <div class="dev-badge coming"><i class="fa-solid fa-lightbulb"></i> Idea Phase</div>
+          <div class="project-icon"><i class="fa-solid fa-plus"></i></div>
+          <h3 class="project-title">Next Big Idea</h3>
+          <p class="project-desc">Something new is brewing. Stay tuned — the best projects are the ones you haven't thought of yet. Watch this space.</p>
+          <div class="project-tech">
+            <span>TBD</span>
+          </div>
+          <div class="project-progress">
+            <div class="progress-label"><span>Progress</span><span>0%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ HOBBIES ═══════════════════════════ -->
+  <section id="hobbies">
+    <div class="container">
+      <div class="section-label">05 — Beyond Code</div>
+      <h2 class="section-title reveal">Life Outside<br/><span>the Screen</span></h2>
+      <div class="hobbies-grid">
+
+        <div class="hobby-card trek reveal">
+          <div class="hobby-bg-icon"><i class="fa-solid fa-mountain"></i></div>
+          <div class="hobby-icon"><i class="fa-solid fa-mountain"></i></div>
+          <h3>Mountain Trekking</h3>
+          <p>The Himalayas are my sanctuary. Trekking teaches patience, resilience, and perspective — values I carry into every project and challenge. Tilicho is on the list.</p>
+          <div class="hobby-facts">
+            <span><i class="fa-solid fa-map-pin"></i> 1. Mardi Himal</span>
+            <span><i class="fa-solid fa-map-pin"></i> 2. North ABC</span>
+          </div>
+        </div>
+
+        <div class="hobby-card market reveal">
+          <div class="hobby-bg-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="hobby-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Share Market</h3>
+          <p>I study NEPSE daily. Technical analysis, reading candlesticks, and understanding macroeconomics — finance is where tech meets the real world.</p>
+          <div class="hobby-facts">
+            <span><i class="fa-solid fa-chart-bar"></i> Price Action</span>
+            <span><i class="fa-solid fa-brain"></i> SMC</span>
+          </div>
+        </div>
+
+        <div class="hobby-card techh reveal">
+          <div class="hobby-bg-icon"><i class="fa-solid fa-microchip"></i></div>
+          <div class="hobby-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3>Technology</h3>
+          <p>Constantly exploring new frameworks, reading tech news, and experimenting with side projects. Whether it's AI, open source, or hardware — I want to know how it works.</p>
+          <div class="hobby-facts">
+            <span><i class="fa-brands fa-github"></i> Open Source</span>
+            <span><i class="fa-solid fa-rocket"></i> Innovation</span>
+          </div>
+        </div>
+
+        <div class="hobby-card fashionn reveal">
+          <div class="hobby-bg-icon"><i class="fa-solid fa-shirt"></i></div>
+          <div class="hobby-icon"><i class="fa-solid fa-shirt"></i></div>
+          <h3>Fashion & Style</h3>
+          <p>Fashion is personal branding in physical form. I'm drawn to aesthetics that blend minimalism with cultural identity — inspired by Nepali craftsmanship and street style.</p>
+          <div class="hobby-facts">
+            <span><i class="fa-solid fa-palette"></i> Aesthetics</span>
+            <span><i class="fa-solid fa-star"></i>Formal</span>
+          </div>
+        </div>
+
+        <div class="hobby-card content reveal">
+            <div class="hobby-bg-icon"><i class="fa-solid fa-camera"></i></div>
+            <div class="hobby-icon"><i class="fa-solid fa-camera"></i></div>
+            <h3>Content Creation</h3>
+            <p>Content creation helps me share my ideas, pov, build an online presence, and connect with people through meaningful my own creation.</p>
+            <div class="hobby-facts">
+              <span><i class="fa-solid fa-react"></i> POV</span>
+              <span><i class="fa-solid fa-star"></i> Entertainment</span>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CERTIFICATIONS ═══════════════════════════ -->
+  <section id="certifications" class="section-dark">
+    <div class="container">
+      <div class="section-label">06 — Certifications</div>
+      <h2 class="section-title reveal">Courses &<br/><span>Certifications</span></h2>
+      <div class="cert-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fa-brands fa-react"></i></div>
+          <div class="cert-body">
+            <div class="cert-issuer">Coursera / Meta</div>
+            <h4 class="cert-title">React Basics</h4>
+            <p class="cert-status ongoing"><i class="fa-solid fa-spinner fa-spin"></i> In Progress</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fa-brands fa-js"></i></div>
+          <div class="cert-body">
+            <div class="cert-issuer">freeCodeCamp</div>
+            <h4 class="cert-title">JavaScript Algorithms & Data Structures</h4>
+            <p class="cert-status ongoing"><i class="fa-solid fa-spinner fa-spin"></i> In Progress</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="cert-body">
+            <div class="cert-issuer">Self Study</div>
+            <h4 class="cert-title">Technical Analysis — Stock Markets</h4>
+            <p class="cert-status done"><i class="fa-solid fa-check-circle"></i> Completed</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+          <div class="cert-body">
+            <div class="cert-issuer">Google / Youtube</div>
+            <h4 class="cert-title">Python for Beginner</h4>
+            <p class="cert-status done"><i class="fa-solid fa-check-circle"></i> Completed</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fa-brands fa-git-alt"></i></div>
+          <div class="cert-body">
+            <div class="cert-issuer">GitHub</div>
+            <h4 class="cert-title">Git & Version Control Fundamentals</h4>
+            <p class="cert-status ongoing"><i class="fa-solid fa-spinner fa-spin"></i> In Progress</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal add-cert">
+          <div class="cert-icon"><i class="fa-solid fa-plus"></i></div>
+          <div class="cert-body">
+            <div class="cert-issuer">Add Your Own</div>
+            <h4 class="cert-title">Your Next Certification</h4>
+            <p class="cert-status ongoing"><i class="fa-solid fa-spinner fa-spin"></i> Coming Soon</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">07 — Contact</div>
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <h2 class="section-title">Let's<br/>build<br/><span>something.</span></h2>
+          <p class="contact-desc">Whether you have a project idea, want to collaborate, or just want to say hi — my inbox is open. I'm always excited to connect with fellow students, devs, and curious minds.</p>
+          <div class="contact-links">
+            <a href="mailto:aashutoshbanjade12@gmail.com" class="contact-link">
+              <i class="fa-solid fa-envelope"></i>
+              <span>aashutoshbanjade12@gmail.com</span>
+            </a>
+            <a href="https://github.com/aashutosh1-max" target="_blank" class="contact-link">
+              <i class="fa-brands fa-github"></i>
+              <span>github.com/aashutosh-max</span>
+            </a>
+            <a href="https://www.linkedin.com/in/aashutosh-banjade-406608317/" target="_blank" class="contact-link">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>linkedin.com/in/aashutosh-banjade-406608317</span>
+            </a>
+            <a href="https://www.tiktok.com/@aashutosh.pov" target="_blank" class="contact-link">
+              <i class="fa-brands fa-tiktok"></i>
+              <span>@aashutosh.pov</span>
+            </a>
+            <a href="https://www.instagram.com/aashutosh.pov" target="_blank" class="contact-link">
+              <i class="fa-brands fa-instagram"></i>
+              <span>@aashutosh.pov</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Balloon Shah" required/>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="Balloonshah@email.com" required/>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" placeholder="Project collaboration, internship..."/>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="5" placeholder="Tell me what's on your mind..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <p class="form-note" id="formMsg"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Mr<span>.</span> Banjade</div>
+      <p class="footer-copy"> © All rights reserved 2026&nbsp;·&nbsp;Butwal, Nepal &nbsp;·&nbsp; Aashutosh Banjade</p>
+      <div class="footer-socials">
+        <a href="https://github.com/aashutosh1-max" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/aashutosh-banjade-406608317/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.tiktok.com/@aashutosh.pov" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://instagram.com/aashutosh.pov" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-back-top">
+      <a href="#hero" id="backTop" title="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
