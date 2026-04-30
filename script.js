@@ -6,6 +6,15 @@
 ═══════════════════════════════════════════ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  /* ── 0. LOADING SCREEN ── */
+const loader = document.getElementById('loader');
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    loader.classList.add('hide');
+    // remove from DOM after fade completes
+    setTimeout(() => loader.remove(), 700);
+  }, 2000); // 2 seconds total — adjust if you want longer
+});
 
   /* ── 1. CUSTOM CURSOR ──────────────────── */
   const cursor    = document.getElementById('cursor');
