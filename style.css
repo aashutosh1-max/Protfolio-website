@@ -529,3 +529,50 @@ footer {
 @keyframes loaderProgress {
   to { width: 100%; }
 }
+
+/* ── CONTENT CREATION OPPORTUNITY CARD ── */
+.content-open-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(140,239,82,0.12); color: #8cef52;
+  border: 1px solid rgba(140,239,82,0.3);
+  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+  font-weight: 500; padding: 0.35rem 0.9rem; border-radius: 999px;
+  margin-bottom: 1.2rem;
+  animation: badgePulse 2.5s ease-in-out infinite;
+}
+.content-open-badge i { color: #8cef52; font-size: 0.75rem; }
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(140,239,82,0.25); }
+  50%       { box-shadow: 0 0 0 6px rgba(140,239,82,0); }
+}
+
+.content-cta {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 1.5rem; padding: 0.75rem 1rem;
+  background: rgba(140,239,82,0.08);
+  border: 1px solid rgba(140,239,82,0.2);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+a.hobby-card.content:hover .content-cta {
+  background: rgba(140,239,82,0.15);
+  border-color: rgba(140,239,82,0.45);
+}
+.content-cta-text {
+  font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #8cef52; font-weight: 500; display: flex; align-items: center; gap: 0.5rem;
+}
+.content-arrow {
+  font-size: 1.1rem; color: #8cef52;
+  transition: transform 0.3s;
+}
+a.hobby-card.content:hover .content-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* border glow on hover */
+a.hobby-card.content:hover {
+  border-color: rgba(140,239,82,0.35);
+  box-shadow: 0 8px 40px rgba(140,239,82,0.08);
+}
